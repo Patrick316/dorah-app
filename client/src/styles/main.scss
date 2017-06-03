@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis:400,500,600,700,800|Maven+Pro:400,700,900');
+
+
+/*Questrial*/
+
+body{
+  background-color: #FFEDDC !important;
+}
+.App, .Profile, .Category, .Personal-Profile {
+
+  .App-header {
+    text-align: center;
+    background-color: #67A2B2 ;
+    height: 150px;
+    padding: 20px;
+    color: white;
+    h2{
+      font-size:30px;
+      font-family: 'Dosis', sans-serif;
+      margin-bottom:0px;
+    }
+    a{
+      color:white;
+    }
+    a:hover{
+      text-decoration:none;
+      cursor: pointer;
+    }
+    h2:nth-child(2){
+      font-size:52px;
+      font-weight:bold;
+      margin:0px;
+      padding:0px;
+      font-family: 'Dosis', sans-serif;
+
+    }
+    .form-text{
+      float:right;
+      margin:0px;
+      padding:0px;
+      text-align:left !important;
+      margin-bottom:15px;
+      color:white !important;;
+    }
+    .header-logo{
+      margin-top:11px;
+    }
+  }
+}
+.App{
+  .Search-intro {
+    font-size: large;
+    input{
+      width:500px;
+      border-radius:4px;
+    }
+    h4{
+      margin-top:10px;
+    }
+    h4,p,strong{
+      font-family: 'Maven Pro', sans-serif;
+    }
+    input{
+      margin-top:20px;
+      margin-bottom:10px;
+    }
+    .main-search-input{
+      padding:3px;
+    }
+    .main-search-buttons{
+      margin-top:-5px;
+    }
+    .card-title{
+      display:block;
+    }
+    .search-container{
+      margin-bottom:40px;
+      .card{
+        height:180px;
+        button{
+          margin-top:15px;
+          float:right;
+        }
+        h4{
+          margin-bottom:0px;
+        }
+        .card-img{
+          float:left;
+          margin-right:10px;
+          width:30%;
+        }
+        font-size:13px !important;
+        p{
+          margin:0px;
+        }
+        a{
+          color:white;
+        }
+      }
+      .search-items{
+        margin-left:18%;
+        margin-right:18%;
+        margin-top: 9px;
+        li{
+          display:inline;
+            margin-right:10px;
+        }
+      }
+      input,strong{
+        text-align:center;
+      }
+
+    }
+  }
+  .Cat-intro{
+    background-color:#C3F2FF;
+    width:100%;
+    font-family: 'Maven Pro', sans-serif;
+    padding:12px;
+
+    .cat-space{
+      margin-top: 20px;
+      margin-bottom: 10px;
+      p{
+        text-align: center !important;
+      }
+    }
+    .card-text{
+      font-weight:bold;
+      margin:5px;
+      a{
+        color: #67a2b2 !important;
+      }
+    }
+    .more-tab{
+      float:right;
+      font-weight:bold;
+    }
+  }
+  .Signup-intro{
+
+    p, form{
+      text-align:left !important;
+    }
+    .row{
+      padding:30px;
+      margin-top:20px;
+    }
+    .FormInput input{
+         width: 85%;
+         margin: 6px;
+         border-radius: 4px;
+         padding: 6px;
+
+    }
+    .ReactForm{
+      form{
+        p{
+          font-weight: bold;
+          margin: 0px;
+          margin-left: 4px;
+          font-size: 18px;
+          margin-bottom: 2px;
+        }
+        small{
+          margin:0px;
+          margin-left:7px;
+          margin-bottom:4px;
+        }
+        button{
+          font-weight: bold;
+          font-size:18px;
+        }
+        span{
+          float:left;
+        }
+        label:nth-child(1){
+          margin-right:10px;
+        }
+        label{
+          .FormInput{
+            float:left;
+            margin-right:10px;
+          }
+        }
+      }
+    }
+  }
+  .Footer{
+    margin-top:30px;
+    ul{
+      list-style-type:none;
+      margin-left:4.5%;
+    }
+    li{
+      display:inline;
+      font-weight:bold;
+      margin-left:30px;
+      font-size:11px;
+    }
+  }
+}
+.Profile, .Personal-Profile{
+  .profile-img{
+    width:200px;
+  }
+  p{
+    font-family: 'Maven Pro', sans-serif;
+    color:black;
+    font-size:15px;
+  }
+  .profile-card{
+    background-color:white;
+    border-radius:5px;
+    padding:10px;
+    width:100%;
+    margin-top:25px;
+
+  }
+  .profile-card{
+    ul{
+      list-style-type:none;
+    }
+    .hour-title{
+      margin:8px;
+    }
+    li{
+      margin:8px;
+      font-size:12px;
+    }
+  }
+  .profile-main-content{
+    .profile-card{
+        padding:10px;
+        .review-card{
+          margin:5px;
+          border: .9px solid #e9e9e9;
+          border-radius:5px;
+          padding:10px;
+          p{
+            margin:0px !important;
+          }
+          .comment-reply{
+            float:right;
+            color: red;
+            font-size:14px;
+          }
+        }
+        .header-tag{
+          font-family: 'Dosis', sans-serif;
+          padding-top: 12px;
+          padding-left: 25px;
+          font-size:20px;
+          .address{
+            text-transform:uppercase;
+          }
+          strong{
+            font-weight:bold;
+            font-size:24px;
+            margin-right:15px;
+          }
+          a{
+            color:#67a2b2;
+          }
+        }
+      .excerpt-top{
+        margin:24px;
+      }
+      .business-photos{
+        height:250px;
+        width:100%;
+      }
+      .contact-info{
+          margin-top:1px;
+          margin-left:17px;
+          .title{
+            font-weight:bold;
+            color:#67a2b2;
+          }
+          li{
+            display:inline;
+            font-size:14px;
+          }
+      }
+    }
+  }
+  .Footer{
+    margin-top:30px;
+    ul{
+      list-style-type:none;
+    }
+    li{
+      display:inline;
+      font-weight:bold;
+      margin-left:30px;
+      font-size:11px;
+    }
+  }
+
+}
+.signUpModal{
+    font-family: 'Maven Pro', sans-serif;
+}
+.form-modal{
+  p{
+    font-family: 'Maven Pro', sans-serif;
+  }
+  input{
+    width:100%;
+    margin-bottom:10px;
+    padding:5px;
+    border-radius:3px;
+  }
+  textarea{
+    width:100%;
+    border-radius:3px;
+    height:160px;
+    margin-bottom:10px;
+  }
+  button{
+    float:right;
+  }
+  .color-green{
+    color:#6AD915;
+  }
+  .color-red{
+    color:#E71E2E;
+  }
+}

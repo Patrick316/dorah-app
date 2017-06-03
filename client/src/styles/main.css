@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css?family=Dosis:400,500,600,700,800|Maven+Pro:400,700,900");
+/*Questrial*/
+body {
+  background-color: #FFEDDC !important; }
+
+.App .App-header, .Profile .App-header, .Category .App-header, .Personal-Profile .App-header {
+  text-align: center;
+  background-color: #67A2B2;
+  height: 150px;
+  padding: 20px;
+  color: white; }
+  .App .App-header h2, .Profile .App-header h2, .Category .App-header h2, .Personal-Profile .App-header h2 {
+    font-size: 30px;
+    font-family: 'Dosis', sans-serif;
+    margin-bottom: 0px; }
+  .App .App-header a, .Profile .App-header a, .Category .App-header a, .Personal-Profile .App-header a {
+    color: white; }
+  .App .App-header a:hover, .Profile .App-header a:hover, .Category .App-header a:hover, .Personal-Profile .App-header a:hover {
+    text-decoration: none;
+    cursor: pointer; }
+  .App .App-header h2:nth-child(2), .Profile .App-header h2:nth-child(2), .Category .App-header h2:nth-child(2), .Personal-Profile .App-header h2:nth-child(2) {
+    font-size: 52px;
+    font-weight: bold;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Dosis', sans-serif; }
+  .App .App-header .form-text, .Profile .App-header .form-text, .Category .App-header .form-text, .Personal-Profile .App-header .form-text {
+    float: right;
+    margin: 0px;
+    padding: 0px;
+    text-align: left !important;
+    margin-bottom: 15px;
+    color: white !important; }
+  .App .App-header .header-logo, .Profile .App-header .header-logo, .Category .App-header .header-logo, .Personal-Profile .App-header .header-logo {
+    margin-top: 11px; }
+
+.App .Search-intro {
+  font-size: large; }
+  .App .Search-intro input {
+    width: 500px;
+    border-radius: 4px; }
+  .App .Search-intro h4 {
+    margin-top: 10px; }
+  .App .Search-intro h4, .App .Search-intro p, .App .Search-intro strong {
+    font-family: 'Maven Pro', sans-serif; }
+  .App .Search-intro input {
+    margin-top: 20px;
+    margin-bottom: 10px; }
+  .App .Search-intro .main-search-input {
+    padding: 3px; }
+  .App .Search-intro .main-search-buttons {
+    margin-top: -5px; }
+  .App .Search-intro .card-title {
+    display: block; }
+  .App .Search-intro .search-container {
+    margin-bottom: 40px; }
+    .App .Search-intro .search-container .card {
+      height: 180px;
+      font-size: 13px !important; }
+      .App .Search-intro .search-container .card button {
+        margin-top: 15px;
+        float: right; }
+      .App .Search-intro .search-container .card h4 {
+        margin-bottom: 0px; }
+      .App .Search-intro .search-container .card .card-img {
+        float: left;
+        margin-right: 10px;
+        width: 30%; }
+      .App .Search-intro .search-container .card p {
+        margin: 0px; }
+      .App .Search-intro .search-container .card a {
+        color: white; }
+    .App .Search-intro .search-container .search-items {
+      margin-left: 18%;
+      margin-right: 18%;
+      margin-top: 9px; }
+      .App .Search-intro .search-container .search-items li {
+        display: inline;
+        margin-right: 10px; }
+    .App .Search-intro .search-container input, .App .Search-intro .search-container strong {
+      text-align: center; }
+.App .Cat-intro {
+  background-color: #C3F2FF;
+  width: 100%;
+  font-family: 'Maven Pro', sans-serif;
+  padding: 12px; }
+  .App .Cat-intro .cat-space {
+    margin-top: 20px;
+    margin-bottom: 10px; }
+    .App .Cat-intro .cat-space p {
+      text-align: center !important; }
+  .App .Cat-intro .card-text {
+    font-weight: bold;
+    margin: 5px; }
+    .App .Cat-intro .card-text a {
+      color: #67a2b2 !important; }
+  .App .Cat-intro .more-tab {
+    float: right;
+    font-weight: bold; }
+.App .Signup-intro p, .App .Signup-intro form {
+  text-align: left !important; }
+.App .Signup-intro .row {
+  padding: 30px;
+  margin-top: 20px; }
+.App .Signup-intro .FormInput input {
+  width: 85%;
+  margin: 6px;
+  border-radius: 4px;
+  padding: 6px; }
+.App .Signup-intro .ReactForm form p {
+  font-weight: bold;
+  margin: 0px;
+  margin-left: 4px;
+  font-size: 18px;
+  margin-bottom: 2px; }
+.App .Signup-intro .ReactForm form small {
+  margin: 0px;
+  margin-left: 7px;
+  margin-bottom: 4px; }
+.App .Signup-intro .ReactForm form button {
+  font-weight: bold;
+  font-size: 18px; }
+.App .Signup-intro .ReactForm form span {
+  float: left; }
+.App .Signup-intro .ReactForm form label:nth-child(1) {
+  margin-right: 10px; }
+.App .Signup-intro .ReactForm form label .FormInput {
+  float: left;
+  margin-right: 10px; }
+.App .Footer {
+  margin-top: 30px; }
+  .App .Footer ul {
+    list-style-type: none;
+    margin-left: 4.5%; }
+  .App .Footer li {
+    display: inline;
+    font-weight: bold;
+    margin-left: 30px;
+    font-size: 11px; }
+
+.Profile .profile-img, .Personal-Profile .profile-img {
+  width: 200px; }
+.Profile p, .Personal-Profile p {
+  font-family: 'Maven Pro', sans-serif;
+  color: black;
+  font-size: 15px; }
+.Profile .profile-card, .Personal-Profile .profile-card {
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  margin-top: 25px; }
+.Profile .profile-card ul, .Personal-Profile .profile-card ul {
+  list-style-type: none; }
+.Profile .profile-card .hour-title, .Personal-Profile .profile-card .hour-title {
+  margin: 8px; }
+.Profile .profile-card li, .Personal-Profile .profile-card li {
+  margin: 8px;
+  font-size: 12px; }
+.Profile .profile-main-content .profile-card, .Personal-Profile .profile-main-content .profile-card {
+  padding: 10px; }
+  .Profile .profile-main-content .profile-card .review-card, .Personal-Profile .profile-main-content .profile-card .review-card {
+    margin: 5px;
+    border: .9px solid #e9e9e9;
+    border-radius: 5px;
+    padding: 10px; }
+    .Profile .profile-main-content .profile-card .review-card p, .Personal-Profile .profile-main-content .profile-card .review-card p {
+      margin: 0px !important; }
+    .Profile .profile-main-content .profile-card .review-card .comment-reply, .Personal-Profile .profile-main-content .profile-card .review-card .comment-reply {
+      float: right;
+      color: red;
+      font-size: 14px; }
+  .Profile .profile-main-content .profile-card .header-tag, .Personal-Profile .profile-main-content .profile-card .header-tag {
+    font-family: 'Dosis', sans-serif;
+    padding-top: 12px;
+    padding-left: 25px;
+    font-size: 20px; }
+    .Profile .profile-main-content .profile-card .header-tag .address, .Personal-Profile .profile-main-content .profile-card .header-tag .address {
+      text-transform: uppercase; }
+    .Profile .profile-main-content .profile-card .header-tag strong, .Personal-Profile .profile-main-content .profile-card .header-tag strong {
+      font-weight: bold;
+      font-size: 24px;
+      margin-right: 15px; }
+    .Profile .profile-main-content .profile-card .header-tag a, .Personal-Profile .profile-main-content .profile-card .header-tag a {
+      color: #67a2b2; }
+  .Profile .profile-main-content .profile-card .excerpt-top, .Personal-Profile .profile-main-content .profile-card .excerpt-top {
+    margin: 24px; }
+  .Profile .profile-main-content .profile-card .business-photos, .Personal-Profile .profile-main-content .profile-card .business-photos {
+    height: 250px;
+    width: 100%; }
+  .Profile .profile-main-content .profile-card .contact-info, .Personal-Profile .profile-main-content .profile-card .contact-info {
+    margin-top: 1px;
+    margin-left: 17px; }
+    .Profile .profile-main-content .profile-card .contact-info .title, .Personal-Profile .profile-main-content .profile-card .contact-info .title {
+      font-weight: bold;
+      color: #67a2b2; }
+    .Profile .profile-main-content .profile-card .contact-info li, .Personal-Profile .profile-main-content .profile-card .contact-info li {
+      display: inline;
+      font-size: 14px; }
+.Profile .Footer, .Personal-Profile .Footer {
+  margin-top: 30px; }
+  .Profile .Footer ul, .Personal-Profile .Footer ul {
+    list-style-type: none; }
+  .Profile .Footer li, .Personal-Profile .Footer li {
+    display: inline;
+    font-weight: bold;
+    margin-left: 30px;
+    font-size: 11px; }
+
+.signUpModal {
+  font-family: 'Maven Pro', sans-serif; }
+
+.form-modal p {
+  font-family: 'Maven Pro', sans-serif; }
+.form-modal input {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 5px;
+  border-radius: 3px; }
+.form-modal textarea {
+  width: 100%;
+  border-radius: 3px;
+  height: 160px;
+  margin-bottom: 10px; }
+.form-modal button {
+  float: right; }
+.form-modal .color-green {
+  color: #6AD915; }
+.form-modal .color-red {
+  color: #E71E2E; }
+
+/*# sourceMappingURL=main.css.map */
