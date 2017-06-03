@@ -1,18 +1,21 @@
 {
   "name": "dorah",
   "version": "1.0.0",
-  "description": "",
+  "description": "back end for a mailer",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.17.2",
     "express": "^4.15.3",
     "express-email": "^1.1.1",
     "express-router": "^0.0.1",
+    "method-override": "^2.3.9",
     "nodemailer": "^4.0.1"
   }
 }

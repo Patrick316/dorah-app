@@ -1,8 +1,11 @@
 var express = require('express');
-var nodemailer = require('nodemailer');
+var bodyParser = require('body-parser');
+var methodOverride = require('method-override');
+var port = process.env.PORT || 3001;
 var app = express();
 
 
+//Header Priviledges
 app.all('*',function(req, res, next){
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Methods', 'PUT, GET, POST, DELETE, OPTIONS');
@@ -10,17 +13,23 @@ app.all('*',function(req, res, next){
   next();}
 );
 
-app.get('/user', function (req, res) {
-    res.send(req);
+//API Data set up
+app.use(bodyParser.json());
+app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(methodOverride('X-HTTP-Method-Override'));
+
+
+
+app.post('/user', function (req, res) {
+  console.log("data from frontend: ", req.body);
+  // return req.body;
+  res.send("we got your data!");
 });
 
-app.post('/user', function(req,res){
-    console.log("hello");
-});
 
 
 
-
-app.listen(4000,()=>{
-    console.log('listening on 4000');
+app.listen(port, function() {
+  console.log("App listening on PORT: " + port);
 });

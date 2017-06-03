@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import { Form, Text,  Checkbox, Textarea} from 'react-form';
-import app from '../utils/signup-api';
+import userSignUpUtil from '../utils/signup-api';
 
 class SignUpForm extends Component {
   constructor(props) {
@@ -35,9 +35,9 @@ class SignUpForm extends Component {
         role = 'personal';
       }
       this.toggle();
-      app.userData(this.state.first, this.state.last, fname, fname, values.locale, this.state.email, values.psswrd, role, values.story).then((data)=>{
-        console.log(data);
-      });
+      console.log(fname, role);
+      userSignUpUtil.postSaved(fname, role);
+
    }else{
      this.setState({pssretype:'Passwords are not the same.'});
    }

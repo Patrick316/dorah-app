@@ -1,18 +1,15 @@
 var axios = require("axios");
 
-const createUser = {
-    userData: (first, last, usr, nck, loc, eml, pss, role, stry) => {
-
-        return axios.post('http://localhost:4000/new/user/', "um whyyy???")
-        .then(function (response) {
-            console.log(response);
-          })
-          .catch(function (error) {
-            console.log(error);
-         });
-
+const userSign = {
+      postSaved: function(fname, role) {
+      var newUser = { title: fname, role:role };
+      return axios.post("http://localhost:3001/user", newUser)
+        .then(function(response) {
+          console.log("axios results", response);
+          return response;
+        });
     }
-}
+  }
 
 
-module.exports = createUser;
+module.exports = userSign;
