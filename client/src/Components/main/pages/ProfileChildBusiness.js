@@ -60,32 +60,32 @@ class BusinessProfile extends Component {
       });
   }
   galleryContent(){
-    return this.state.profile.map((value, index)=>{
-      if(value.acf.business_photos){
-        return(
-          <div className="profile-main-content" key={index}>
-            <div className="profile-card">
-              {value.acf.business_photos.map((value,index)=>{
-                  return <img src={value.sizes.medium} alt="restaurant pics" className="img-thumbnail profile-img" key={index}/>
-                })}
+    if(this.state.profile.acf.business_photos){
+      return this.state.profile.map((value, index)=>{
+          return(
+            <div className="profile-main-content" key={index}>
+                <div className="profile-card">
+                  {value.acf.business_photos.map((value,index)=>{
+                      return <img src={value.sizes.medium} alt="restaurant pics" className="img-thumbnail profile-img" key={index}/>
+                    })}
+                </div>
             </div>
-        </div>
-        )
-      }
-    });
+          )
+      });
+    }
   }
   aboutContent(){
-    return this.state.profile.map((value, index)=>{
-      if(value.acf.about){
-        return(
-          <div className="profile-main-content" key={index}>
-            <div className="profile-card">
-              <div dangerouslySetInnerHTML={{__html: value.acf.about}}/>
-            </div>
-        </div>
-        )
-      }
-    });
+    if(this.state.profile.acf.about){
+      return this.state.profile.map((value, index)=>{
+          return(
+            <div className="profile-main-content" key={index}>
+              <div className="profile-card">
+                <div dangerouslySetInnerHTML={{__html: value.acf.about}}/>
+              </div>
+          </div>
+          )
+      });
+    }
   }
   commentContent(){
     if(this.state.comments.length > 0)

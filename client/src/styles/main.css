@@ -229,4 +229,19 @@ body {
 .form-modal .color-red {
   color: #E71E2E; }
 
+.header-search-container .header-search-wrapper {
+  margin-left: 25%;
+  margin-right: 25%; }
+.header-search-container .main-search-buttons {
+  margin-right: 10px; }
+.header-search-container .header-search {
+  list-style-type: none; }
+  .header-search-container .header-search li {
+    display: inline; }
+    .header-search-container .header-search li .main-search-input {
+      width: 450px;
+      margin: 10px;
+      border-radius: 5px;
+      padding: 5px; }
+
 /*# sourceMappingURL=main.css.map */

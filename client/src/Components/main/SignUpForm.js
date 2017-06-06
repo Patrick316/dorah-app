@@ -25,18 +25,22 @@ class SignUpForm extends Component {
  }
  createUser(values){
    if(values.psswrd === values.psswrd_rpt){
-     let fname = this.state.first;
+     let fname = this.state.first.toLowerCase();
+     let lname = this.state.last;
+     let email = this.state.email;
+     let usrname = this.state.first.charAt(0).toLowerCase() + this.state.last.toLowerCase();
+     let psswrd = values.psswrd;
+     let stry = values.story;
+     let cat = values.category;
+     let locale = values.locale;
      let role;
-     fname = fname.substring(0,1) + this.state.last;
-     fname = fname.toLowerCase();
       if(this.state.professional){
         role = 'professional';
       }else if(this.state.personal){
         role = 'personal';
       }
       this.toggle();
-      console.log(fname, role);
-      userSignUpUtil.postSaved(fname, role);
+      userSignUpUtil.postSaved(fname, lname, email, usrname, psswrd, cat, locale, stry, role);
 
    }else{
      this.setState({pssretype:'Passwords are not the same.'});

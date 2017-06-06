@@ -327,3 +327,25 @@ body{
     color:#E71E2E;
   }
 }
+
+.header-search-container{
+  .header-search-wrapper{
+    margin-left:25%;
+    margin-right:25%;
+  }
+  .main-search-buttons{
+    margin-right:10px;
+  }
+  .header-search{
+    list-style-type:none;
+    li{
+      display:inline;
+      .main-search-input{
+        width: 450px;
+        margin: 10px;
+        border-radius: 5px;
+        padding: 5px;
+      }
+    }
+  }
+}

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Header from '../Header';
+import HeaderSearch from '../HeaderSearch';
 
 class Category extends Component {
   constructor(props) {
@@ -12,7 +12,7 @@ class Category extends Component {
   render() {
     return (
       <div className="Category">
-          <Header site={this.state.title} tag={this.state.tag}/>
+          <HeaderSearch site={this.state.title} tag={this.state.tag}/>
           <p>Hello from categories.</p>
       </div>
     )
