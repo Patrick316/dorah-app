@@ -19,34 +19,33 @@ class Category extends Component {
   }
   componentDidMount(){
     app.getCategories(this.props.id).then((data)=>{
+      console.log(data);
       this.setState({res_cats:data});
     });
   }
   resCards(){
-    // let customLink = (type, slug) =>{
-    //   if(type === 'personal'){
-    //     return <Link to={'/user/'+type+'/'+slug}>More</Link>
-    //   }else{
-    //     return <Link to={'/'+type+'/'+slug}>More</Link>
-    //   }
-    // }
-    //   return this.state.res_cats.map((value, index)=>{
-    //     return(
-    //       <div className="col-lg-4 col-md-4 col-sm-12 col-xs-12" key={index}>
-    //           <Card>
-    //             <CardBlock>
-    //                 <CardImg src={value.better_featured_image.media_details.sizes.thumbnail.source_url} alt={value.title.rendered} className="img-thumbnail"/>
-    //                 <CardTitle><strong>{value.title.rendered}</strong></CardTitle>
-    //                 <CardText><strong>{value.acf.location[0].city}</strong>, {value.acf.location[0].state}</CardText>
-    //                 <CardText dangerouslySetInnerHTML={{__html: value.acf.front_tag}}></CardText>
-    //                 <Button color="primary" width="100%">{customLink(value.type, value.slug)}</Button>
-    //               </CardBlock>
-    //           </Card>
-    //       </div>
-    //       console.log(value);
-    //     )
-    //   });
-    console.log(this.state.res_cats);
+    let customLink = (type, slug) =>{
+      if(type === 'personal'){
+        return <Link to={'/user/'+type+'/'+slug}>More</Link>
+      }else{
+        return <Link to={'/'+type+'/'+slug}>More</Link>
+      }
+    }
+    for(let i = 0; i < this.state.res_cats.length; i++){
+      return(
+        <div className="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+            <Card>
+              <CardBlock>
+                  <CardImg src={this.state.res_cats[i].better_featured_image.media_details.sizes.thumbnail.source_url} alt={this.state.res_cats[i].title.rendered} className="img-thumbnail"/>
+                  <CardTitle><strong>{this.state.res_cats[i].title.rendered}</strong></CardTitle>
+                  <CardText><strong>{this.state.res_cats[i].acf.location[0].city}</strong>, {this.state.res_cats[i].acf.location[0].state}</CardText>
+                  <CardText dangerouslySetInnerHTML={{__html: this.state.res_cats[i].acf.front_tag}}></CardText>
+                  <Button color="primary" width="100%">{customLink(this.state.res_cats[i].type, this.state.res_cats[i].slug)}</Button>
+                </CardBlock>
+            </Card>
+        </div>
+      )
+    }
   }
   render() {
     return (
