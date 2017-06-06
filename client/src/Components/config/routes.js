@@ -39,7 +39,7 @@ const personalId = ({ match }) =>
 
 const categoryId = ({ match }) => (
   <div>
-    <Category/>
+    <Category id={match.params.id}/>
   </div>
 )
 

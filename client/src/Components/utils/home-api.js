@@ -13,6 +13,7 @@ const getCatFeatData = {
     return axios.get('http://localhost:8888/DORAHapp/wp-json/wp/v2/multiple-post-type?type[]=professional&type[]=personal')
   		.then((data)=>{
         return data.data;
+        console.log(data.data);
   		}).catch((error)=>{
       		console.log(error);
     	});

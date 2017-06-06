@@ -18,7 +18,7 @@ class Search extends Component {
   }
   componentWillMount(){
     app.getFeatured().then((data)=>{
-      this.setState({restaurants:data})
+      this.setState({restaurants:data});
     });
   }
   toggle() {
