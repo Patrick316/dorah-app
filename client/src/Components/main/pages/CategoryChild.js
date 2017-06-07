@@ -14,27 +14,12 @@ class Category extends Component {
     this.state = {
       title: 'Dorah',
       tag: '',
-      res_cats:''
+      res_cats:[]
     };
   }
-  componentDidMount(){
-    app.getCategories().then((data)=>{
-
-      data.map((value, index)=>{
-          /*strip of dashes and capitalize letters & capitalize letters*/
-          console.log(this.props.id);
-          if( typeof value.category_name !== 'undefined'){
-            for(let i = 0; i < value.category_name.length; i ++ ){
-                console.log(value.category_name[i]);
-                if(this.props.id === value.category_name[i]){
-                  console.log(value);
-                }
-            }
-          }
-
-      })
-
-      this.setState({res_cats:data});
+  componentWillMount(){
+    app.getCategories(this.props.id).then((data)=>{
+          this.setState({res_cats:data});
     });
   }
   resCards(){
@@ -45,21 +30,21 @@ class Category extends Component {
         return <Link to={'/'+type+'/'+slug}>More</Link>
       }
     }
-    for(let i = 0; i < this.state.res_cats.length; i++){
-      return(
-        <div className="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-            <Card>
-              <CardBlock>
-                  <CardImg src={this.state.res_cats[i].better_featured_image.media_details.sizes.thumbnail.source_url} alt={this.state.res_cats[i].title.rendered} className="img-thumbnail"/>
-                  <CardTitle><strong>{this.state.res_cats[i].title.rendered}</strong></CardTitle>
-                  <CardText><strong>{this.state.res_cats[i].acf.location[0].city}</strong>, {this.state.res_cats[i].acf.location[0].state}</CardText>
-                  <CardText dangerouslySetInnerHTML={{__html: this.state.res_cats[i].acf.front_tag}}></CardText>
-                  <Button color="primary" width="100%">{customLink(this.state.res_cats[i].type, this.state.res_cats[i].slug)}</Button>
-                </CardBlock>
-            </Card>
-        </div>
-      )
-    }
+      return this.state.res_cats.map((value, index)=>{
+        return(
+          <div className="col-lg-4 col-md-4 col-sm-12 col-xs-12" key={index}>
+              <Card>
+                <CardBlock>
+                    <CardImg src={value.better_featured_image.media_details.sizes.thumbnail.source_url} alt={value.title.rendered} className="img-thumbnail"/>
+                    <CardTitle><strong>{value.title.rendered}</strong></CardTitle>
+                    <CardText><strong>{value.acf.location[0].city}</strong>, {value.acf.location[0].state}</CardText>
+                    <CardText dangerouslySetInnerHTML={{__html: value.acf.front_tag}}></CardText>
+                    <Button color="primary" width="100%">{customLink(value.type, value.slug)}</Button>
+                  </CardBlock>
+              </Card>
+          </div>
+        )
+      });
   }
   render() {
     return (
