@@ -18,8 +18,22 @@ class Category extends Component {
     };
   }
   componentDidMount(){
-    app.getCategories(this.props.id).then((data)=>{
-      console.log(data);
+    app.getCategories().then((data)=>{
+
+      data.map((value, index)=>{
+          /*strip of dashes and capitalize letters & capitalize letters*/
+          console.log(this.props.id);
+          if( typeof value.category_name !== 'undefined'){
+            for(let i = 0; i < value.category_name.length; i ++ ){
+                console.log(value.category_name[i]);
+                if(this.props.id === value.category_name[i]){
+                  console.log(value);
+                }
+            }
+          }
+
+      })
+
       this.setState({res_cats:data});
     });
   }
