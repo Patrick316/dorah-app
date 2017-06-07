@@ -48,8 +48,8 @@ class PersonalProfile extends Component {
       });
   }
   galleryContent(){
-    if(this.state.profile.acf.business_photos){
       return this.state.profile.map((value, index)=>{
+      if(value.acf.business_photos){
           return(
             <div className="profile-main-content" key={index}>
               <div className="profile-card">
@@ -59,13 +59,13 @@ class PersonalProfile extends Component {
               </div>
           </div>
           )
+            }
         });
-    }
   }
   aboutContent(){
-  if(this.state.profile.acf.about){
-      return this.state.profile.map((value, index)=>{
 
+      return this.state.profile.map((value, index)=>{
+          if(value.acf.about){
           return(
             <div className="profile-main-content" key={index}>
               <div className="profile-card">
@@ -74,8 +74,8 @@ class PersonalProfile extends Component {
               </div>
           </div>
           )
+            }
       });
-    }
   }
   commentContent(){
     if(this.state.comments.length > 0)
