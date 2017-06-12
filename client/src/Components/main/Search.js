@@ -29,7 +29,7 @@ class Search extends Component {
   resCards(){
     let customLink = (type, slug) =>{
       if(type === 'personal'){
-        return <Link to={'/user/'+type+'/'+slug}>More</Link>
+        return <Link to={'/profile/'+type+'/'+slug}>More</Link>
       }else{
         return <Link to={'/'+type+'/'+slug}>More</Link>
       }

@@ -28,7 +28,7 @@ class Category extends Component {
               <Card>
                 <CardBlock>
                   <CardImg src={value.img} alt="{value.name}" className="img-thumbnail"/>
-                  <CardText><a href={"/category/" + value.slug}>{value.name}</a></CardText>
+                  <CardText><a href={"/" + value.slug}>{value.name}</a></CardText>
                   </CardBlock>
               </Card>
           </div>

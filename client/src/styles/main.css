@@ -3,6 +3,16 @@
 body {
   background-color: #FFEDDC !important; }
 
+.App .Footer, .Profile .Footer, .Category .Footer, .Personal-Profile .Footer {
+  margin-top: 30px; }
+  .App .Footer ul, .Profile .Footer ul, .Category .Footer ul, .Personal-Profile .Footer ul {
+    list-style-type: none;
+    margin-left: 4.5%; }
+  .App .Footer li, .Profile .Footer li, .Category .Footer li, .Personal-Profile .Footer li {
+    display: inline;
+    font-weight: bold;
+    margin-left: 30px;
+    font-size: 11px; }
 .App .App-header, .Profile .App-header, .Category .App-header, .Personal-Profile .App-header {
   text-align: center;
   background-color: #67A2B2;
@@ -127,16 +137,6 @@ body {
 .App .Signup-intro .ReactForm form label .FormInput {
   float: left;
   margin-right: 10px; }
-.App .Footer {
-  margin-top: 30px; }
-  .App .Footer ul {
-    list-style-type: none;
-    margin-left: 4.5%; }
-  .App .Footer li {
-    display: inline;
-    font-weight: bold;
-    margin-left: 30px;
-    font-size: 11px; }
 
 .Profile .profile-img, .Personal-Profile .profile-img {
   width: 200px; }
@@ -243,5 +243,27 @@ body {
       margin: 10px;
       border-radius: 5px;
       padding: 5px; }
+
+.Category .cat-card-space {
+  margin-top: 25px;
+  margin-bottom: 10px; }
+.Category .card {
+  height: 180px;
+  font-size: 13px !important; }
+  .Category .card .card-img {
+    float: left;
+    margin-right: 10px;
+    width: 30%; }
+  .Category .card h4 {
+    margin-bottom: 0px; }
+  .Category .card .card-text {
+    margin: 0px; }
+  .Category .card .card-block button {
+    margin-top: 15px;
+    float: right; }
+    .Category .card .card-block button a {
+      color: white !important; }
+    .Category .card .card-block button a:visited {
+      color: white !important; }
 
 /*# sourceMappingURL=main.css.map */

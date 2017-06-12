@@ -8,17 +8,16 @@ import {
 //Routes
 import Home from '../main/Home.js';
 import ProfileBusiness from '../main/pages/ProfileChildBusiness';
-import ProfilePersonal from '../main/pages/ProfileChildPersonal'
+import ProfilePersonal from '../main/pages/ProfileChildPersonal';
 import Category from '../main/pages/CategoryChild';
 
  const dorahRoutes = () => (
     <Router>
       <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/user/:profile/:id" component={personalId}/>
-        <Route path="/category/:id" component={categoryId}/>
+        <Route exact path="/" component={Home}/>
+        <Route path="/profile/:profile/:id" component={personalId}/>
         <Route path="/:type/:id" component={businessId}/>
-
+        <Route path="/:id" component={categoryId}/>
       </Switch>
   </Router>
 
@@ -27,7 +26,7 @@ import Category from '../main/pages/CategoryChild';
 const businessId = ({ match }) =>
 (
   <div>
-    <ProfileBusiness type = {match.params.type} id={match.params.id}/>
+    <ProfileBusiness type={match.params.type} id={match.params.id}/>
   </div>
 )
 const personalId = ({ match }) =>

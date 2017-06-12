@@ -17,6 +17,7 @@ class BusinessProfile extends Component {
   }
   componentWillMount(){
     app.getUser(this.props.id, this.props.type).then((data)=>{
+      console.log(this.props.id);
       this.setState({profile:data});
       app.getUserComments(data[0].id).then((data)=>{
         this.setState({comments:data});

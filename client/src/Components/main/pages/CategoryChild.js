@@ -25,14 +25,14 @@ class Category extends Component {
   resCards(){
     let customLink = (type, slug) =>{
       if(type === 'personal'){
-        return <Link to={'/user/'+type+'/'+slug}>More</Link>
+        return <Link to={'/profile/'+type+'/'+slug}>More</Link>
       }else{
         return <Link to={'/'+type+'/'+slug}>More</Link>
       }
     }
       return this.state.res_cats.map((value, index)=>{
         return(
-          <div className="col-lg-4 col-md-4 col-sm-12 col-xs-12" key={index}>
+          <div className="col-lg-4 col-md-4 col-sm-12 col-xs-12 cat-card-space" key={index}>
               <Card>
                 <CardBlock>
                     <CardImg src={value.better_featured_image.media_details.sizes.thumbnail.source_url} alt={value.title.rendered} className="img-thumbnail"/>
@@ -55,7 +55,9 @@ class Category extends Component {
                   {this.resCards()}
                </div>
             </div>
-          <Footer/>
+            <div className="Footer">
+              <Footer/>
+            </div>
       </div>
     )
   }
