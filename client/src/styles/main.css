@@ -81,9 +81,10 @@ body {
       .App .Search-intro .search-container .card a {
         color: white; }
     .App .Search-intro .search-container .search-items {
-      margin-left: 18%;
+      margin-left: 18.66%;
       margin-right: 18%;
-      margin-top: 9px; }
+      margin-top: 9px;
+      margin-bottom: 30px; }
       .App .Search-intro .search-container .search-items li {
         display: inline;
         margin-right: 10px; }
