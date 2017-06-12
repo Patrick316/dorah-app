@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 //import Lightbox from 'react-image-lightbox';
-import Header from '../Header';
+import HeaderSearch from '../HeaderSearch';
 import Footer from '../Footer';
 import app from '../../utils/profile-api.js';
 import '../../../styles/wp/style.css'
@@ -97,7 +97,7 @@ class PersonalProfile extends Component {
   render() {
     return (
       <div className="Profile">
-          <Header site={this.state.title} tag={this.state.tag}/>
+          <HeaderSearch site={this.state.title} tag={this.state.tag}/>
           <div className="container">
             <div className="row">
               <div className="col-lg-3 col-md-3 col-sm-12 col-xs-12">

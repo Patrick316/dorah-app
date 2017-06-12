@@ -21,7 +21,7 @@ class HeaderSearch extends Component{
     return (
       <div className="full-header header-search-container">
           <div className="App-header">
-            <div className="header-logo">
+            <div className="header-logo-1">
               <Link to="/"><h2>{this.props.tag}</h2>
               <h2>{this.props.site}</h2></Link>
             </div>
