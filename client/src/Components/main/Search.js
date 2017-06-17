@@ -36,7 +36,9 @@ class Search extends Component {
   }
   handleSubmit(event) {
     event.preventDefault();
-    app.makeASearch(this.state.term);
+    app.makeASearch(this.state.term).then((data)=>{
+      console.log(data);
+    });
   }
   resCards(){
     let customLink = (type, slug) =>{
@@ -68,7 +70,7 @@ class Search extends Component {
         <div className="row">
           <div className="col-sm-12 col-xs-12 col-md-12 col-lg-12">
               <form onSubmit={this.handleSubmit}>
-                 <input type="text" placeholder="Search by city, cuisine, reviews " className="main-search-input" onChange={this.handleChange.bind(this)}/>
+                 <input type="text" placeholder="Search by location, cuisine, name " className="main-search-input" onChange={this.handleChange.bind(this)}/>
                  <Button type="submit" color="secondary" className="main-search-buttons"><i className="fa fa-search" aria-hidden="true"></i></Button>
                    <Button color="secondary" id="TooltipExample" className="main-search-buttons"><i className="fa fa-location-arrow" aria-hidden="true"></i></Button>
                    <Tooltip placement="right" isOpen={this.state.tooltipOpen} target="TooltipExample" toggle={this.toggle}>
