@@ -37,6 +37,10 @@ class Search extends Component {
   handleSubmit(event) {
     event.preventDefault();
     app.makeASearch(this.state.term).then((data)=>{
+      if(data){
+        this.setState({restaurants:data});
+      }
+
       console.log(data);
     });
   }

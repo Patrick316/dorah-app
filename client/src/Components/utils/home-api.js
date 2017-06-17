@@ -23,47 +23,43 @@ const getCatFeatData = {
 
     makeASearch: (sel) => {
       let term = sel.toLowerCase();
-        let cat = [];
-
-        function checkCategory(cat, sel){
-            console.log("cats");
-            console.log(cat);
-        }
-
-        return axios.get(catUrl).then((response)=>{
-          cat.push(response.data);
           return axios.get(multUrl).then((response) => {
 
               let results = response.data;
+              let selection = [];
+
               //Here is where we will check title, location, category
 
                 results.map((value,index)=>{
                     let title = value.title.rendered.toLowerCase();
+                    let categories = value.category_name.join();
+                        categories = categories.toLowerCase();
+                        categories = categories.split(',');
+
                     //titles
                     if (title.indexOf(term) >= 0) {
                         //titles
-                        console.log(value);
+                        selection.push(value);
                     }
 
-
+                    //location
                     if(typeof value.acf.address !== 'undefined'){
                         let addressLower = value.acf.address.toLowerCase();
                         if (addressLower.indexOf(term) >= 0) {
                             //address
-                            console.log(value);
+                            selection.push(value);
                         }
                     }
-                })
 
-                return results;
+                    //categories
+                    if(categories.indexOf(term) >=0){
+                      selection.push(value);
+                    }
+                });
 
-              //checkCategory(cat, sel);
-
+                return selection;
 
           });
-        });
-
-
 
     }
 }
