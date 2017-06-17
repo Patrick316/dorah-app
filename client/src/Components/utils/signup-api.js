@@ -14,7 +14,7 @@ const userSign = {
             role: role
         };
 
-        return axios.post("/user/userinfo", newUser)
+        return axios.post("http://localhost:8888/Dorahapp/wp-json/wp/v2/user/userinfo", newUser)
             .then(function(response) {
 
 

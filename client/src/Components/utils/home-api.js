@@ -2,7 +2,7 @@ var axios = require("axios");
 
 const getCatFeatData = {
   getCategories:()=>{
-  return axios.get('/user/wp-json/wp/v2/categories?parent=2')
+  return axios.get('http://localhost:8888/Dorahapp/wp-json/wp/v2/categories?parent=2')
 		.then((data)=>{
       return data;
 		}).catch((error)=>{
@@ -10,7 +10,7 @@ const getCatFeatData = {
   		});
 	},
   getFeatured:()=>{
-    return axios.get('/user/wp-json/wp/v2/multiple-post-type?type[]=professional&type[]=personal')
+    return axios.get('http://localhost:8888/Dorahapp/wp-json/wp/v2/multiple-post-type?type[]=professional&type[]=personal')
   		.then((data)=>{
         return data.data;
         console.log(data.data);
@@ -18,6 +18,9 @@ const getCatFeatData = {
       		console.log(error);
     	});
 
+  },
+  makeASearch:(sel)=>{
+    console.log(sel);
   }
 }
 

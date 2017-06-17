@@ -12,7 +12,7 @@ const methodsForCategories = {
         }
         toTitleCase(cat);
 
-        return axios.get('http://localhost:8888/DORAHapp/wp-json/wp/v2/multiple-post-type?type[]=professional&type[]=personal').then((data) => {
+        return axios.get('http://localhost:8888/Dorahapp/wp-json/wp/v2/user/wp-json/wp/v2/multiple-post-type?type[]=professional&type[]=personal').then((data) => {
             let cats = data.data;
             let results = [];
             for (let prop in cats) {
